@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const NewAdminuser = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://blooming-harbor-85251.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

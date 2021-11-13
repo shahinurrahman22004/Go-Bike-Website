@@ -17,17 +17,14 @@ const AddProduct = () => {
     const handleProducts = e => {
         alert('Product added');
 
-        const product = {
-            ...products,
-        }
-        console.log(product);
+        
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://blooming-harbor-85251.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(products)
         })
         .then(res => res.json())
         .then(data => setProducts(data))

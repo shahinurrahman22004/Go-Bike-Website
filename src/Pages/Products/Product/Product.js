@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-    const {name, img, text, price} = props.product;
+    const {_id, name, img, text, price} = props.product;
     return (
         <Grid container item xs={12} sm={6} md={4}>
             <Card style={{margin: 'auto'}} sx={{ maxWidth: 345 }}>
@@ -20,7 +20,7 @@ const Product = (props) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Link style={{margin: 'auto'}} to="/checkout">
+                    <Link style={{margin: 'auto'}} to={`/checkout/${_id}`}>
                     <button type="submit" style={{width: '300px', marginBottom: '20px'}} className="bg-indigo-700 focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm">
                             Buy Now
                         </button>

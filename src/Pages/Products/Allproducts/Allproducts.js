@@ -5,9 +5,9 @@ import Product from '../Product/Product';
 const Allproducts = () => {
 
   const [products, setProducts] = useState([]);
-
+  const size = 10;
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch(`https://blooming-harbor-85251.herokuapp.com/products?size=${size}`)
     .then(res => res.json())
     .then(data => setProducts(data));
 }, [])

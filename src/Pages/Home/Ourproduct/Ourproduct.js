@@ -5,13 +5,13 @@ import Product from '../Product/Product';
 
 const Ourproduct = ({products, setProducts}) => {
 
-   
-
+    const size = 6;
+    
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch(`https://blooming-harbor-85251.herokuapp.com/products?size=${size}`)
         .then(res => res.json())
         .then(data => setProducts(data));
-    }, [])
+    }, [setProducts])
 
     return (
         <>
